@@ -4,3 +4,17 @@
 
 
 
+body {
+  padding-left: 250px;
+  transition: padding-left 0.3s;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-left: 0;
+  }
+}
+
+.custom-sidebar-bg {
+  background-color: #123456 !important; /* ta couleur */
+}
