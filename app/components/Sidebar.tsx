@@ -5,6 +5,7 @@ import profileImage from '../img/profile.png';
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
 
   // Gère le scroll du body pour mobile
   useEffect(() => {
@@ -27,6 +28,12 @@ export default function Sidebar() {
     window.addEventListener("resize", checkScreenSize);
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) return null;
 
   const closeSidebar = () => setIsOpen(false);
 
