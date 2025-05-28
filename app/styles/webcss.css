@@ -409,3 +409,9 @@ nav.custom-sidebar-bg > div {
 
 
 
+@media (min-width: 768px) {
+  nav.custom-sidebar-bg {
+    display: flex !important;
+    transform: translateX(0) !important;
+  }
+}
