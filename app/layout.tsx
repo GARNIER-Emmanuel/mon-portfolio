@@ -4,7 +4,8 @@ import { Sidebar } from "./components/Sidebar";
 import BodyPage from './components/BodyPage';
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import "./globals.css";
+import "./styles/webcss.css";
+import "./styles/mobilecss.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
