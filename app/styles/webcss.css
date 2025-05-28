@@ -139,7 +139,6 @@ html, body {
   color: #123456;
   box-sizing: border-box;
 }
-
 .about-section h2 {
   font-size: 2.5rem;
   color: #123456;
@@ -147,6 +146,7 @@ html, body {
   display: inline-block;
   padding-bottom: 0.3rem;
 }
+
 
 .about-section p {
   text-align: justify; 
@@ -318,7 +318,9 @@ nav.custom-sidebar-bg > div {
   font-size: 1.2rem;
   margin-right: 8px;
 }
-/* BodyPage Skills Section */
+/* BodyPage Skills Section -------------------------------------------------------------------*/
+
+
 .skills-section {
   display: flex;            /* on transforme en flex container */
   flex-direction: column;   /* vertical */
@@ -429,4 +431,253 @@ nav.custom-sidebar-bg > div {
     display: flex !important;
     transform: translateX(0) !important;
   }
+
+
+  /* resume partie */
+  
+
+/* Timeline Container */
+.timeline-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.timeline-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--bs-primary);
+  margin-bottom: 2rem;
+}
+
+/* Timeline Bar */
+.timeline-bar {
+  position: relative;
+  height: 6px;
+  background-color: var(--bs-secondary);
+  border-radius: 3px;
+  margin-bottom: 3rem;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--bs-primary);
+  transition: width 0.4s ease;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background-color: var(--bs-light);
+  border: 2px solid var(--bs-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.timeline-point.active {
+  transform: translate(-50%, -50%) scale(1.3);
+  background-color: var(--bs-primary);
+}
+
+.year-label {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: var(--bs-body-color);
+}
+
+/* Details ---------------------------------------------------------------------- */
+
+
+.timeline-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #123456;
+  border-bottom: 3px solid #123456;
+  display: inline-block;
+  padding-bottom: 0.3rem; /* optionnel selon l'exemple about-section */
+  margin-bottom: 1rem;    /* à ajuster selon besoin */
+}
+
+
+
+.timeline-title h2{
+  font-size: 2.5rem;
+  color: #123456;
+  border-bottom: 3px solid #123456;
+  display: inline-block;
+  
+}
+
+/* Barre de timeline horizontale */
+.timeline-bar {
+  position: relative;
+  width: 70%;
+  margin: 0 auto 2rem; /* marge en bas pour espacer de .timeline-details */
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+/* Progression active sur la timeline */
+.timeline-progress {
+  position: absolute;
+  height: 8px;
+  background-color: #123456;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Les points cliquables sur la timeline */
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ccc;  /* couleur par défaut */
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Point actif : bleu foncé */
+.timeline-point.active {
+  background-color: #2365a7;
+}
+
+/* Points passés (index < activeIndex) : bleu foncé aussi */
+.timeline-point.past {
+  background-color: #123456;
+}
+
+/* Label de date au-dessus des points */
+.year-label {
+  position: absolute;
+  top: -28px;
+  font-size: 0.75rem;
+  color: #123456;
+  white-space: nowrap;
+  user-select: none;
+  transform: translateX(-50%);
+}
+
+/* Section expérience */
+.experience-section {
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #ffffff;
+  height: 100vh; /* optionnel, selon besoin */
+}
+
+.experience-section .timeline-title {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
+/* Détails de l’expérience------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+.timeline-details {
+  background-color: var(--bs-light);
+  border-left: 5px solid #123456;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  margin-top: 2rem; /* espace entre la barre et les détails */
+}
+
+.timeline-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--bs-dark);
+}
+
+.timeline-details h4 {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.1rem;
+  color: #123456;
+  font-weight: 500;
+}
+
+.timeline-details p {
+  color: #123456;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-list li {
+  background-color: #123456;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+
+.skills-section h2,
+.about-section h2,
+.timeline-title h2,
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #123456;
+  border-bottom: 3px solid #123456;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.experience-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-right: 30px;
+  border-radius: 16px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-logo:hover {
+  transform: scale(1.05);
+}
+
+
+
+
 }

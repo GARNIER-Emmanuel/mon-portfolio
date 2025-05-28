@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from 'next/image';
-import profileImage from '../img/profile.png';
+import profileImage from './img/profile.png';
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);

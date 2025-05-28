@@ -151,6 +151,202 @@
   background: transparent;
 }
 
+/* resume partie -----------------------------------------------------------------------------------------------------*/
+.timeline-bar {
+  position: relative;
+  height: 8px;
+  background-color: #ddd;
+  margin: 3rem 0;
+  border-radius: 4px;
+}
+
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 3px solid #123456;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.timeline-point.active {
+  background-color: #123456;
+}
+
+.timeline-point.past {
+  background-color: #12345688;
+}
+
+.year-label {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #123456;
+  white-space: nowrap;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background-color: #123456;
+  border-radius: 4px;
+  z-index: 1;
+  transition: width 0.3s ease;
+}
+
+/* 📱 Version mobile */
+@media (max-width: 768px) {
+  .timeline-bar {
+    height: 6px;
+    margin: 2rem 0;
+  }
+
+  .timeline-point {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+  }
+
+  .year-label {
+    top: -1.5rem;
+    font-size: 0.65rem;
+  }
+
+  .timeline-point.active {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.timeline-details {
+  background-color: var(--bs-light);
+  border-left: 5px solid #123456;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--bs-dark);
+}
+
+.timeline-details h4 {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.1rem;
+  color: #123456;
+  font-weight: 500;
+}
+
+.timeline-details p {
+  color: #123456;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-list li {
+  background-color: #123456;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+.skills-section h2,
+.about-section h2,
+.timeline-title h2,
+.section-title h2 {
+  font-size: 2.5rem;
+  color: #123456;
+  border-bottom: 3px solid #123456;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.experience-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-right: 30px;
+  border-radius: 16px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .timeline-details {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .experience-logo {
+    width: 140px;
+    height: 140px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-details h3 {
+    font-size: 1.25rem;
+  }
+
+  .timeline-details h4 {
+    font-size: 1rem;
+  }
+
+  .tech-list {
+    justify-content: center;
+  }
+}
+
+.year-label {
+  display: none;
+}
+
+.timeline-point.active .year-label {
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.60rem;
+  color: #123456;
+  white-space: nowrap;
+  left: 0;
+  transform: none; 
+}
+
+
 
 }
 
