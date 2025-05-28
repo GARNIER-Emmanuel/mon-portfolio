@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 import imgDev from '../img/dev.png';
 import imgPp from '../img/pp.png';
+
 const skillsData = [
   {
     title: 'Langages de Programmation',
+    icon: 'bi-code-slash', // icône code
     skills: [
       { name: 'JavaScript', level: 90 },
       { name: 'Python', level: 85 },
@@ -13,6 +15,7 @@ const skillsData = [
   },
   {
     title: 'Frameworks et Bibliothèques',
+    icon: 'bi-box-seam', // boîte / package
     skills: [
       { name: 'ReactJS', level: 85 },
       { name: 'Next.js React', level: 70 },
@@ -23,6 +26,7 @@ const skillsData = [
   },
   {
     title: 'CMS et Plateformes',
+    icon: 'bi-columns-gap', // layout, CMS = structure
     skills: [
       { name: 'WordPress', level: 80 },
       { name: 'PrestaShop', level: 70 },
@@ -31,6 +35,7 @@ const skillsData = [
   },
   {
     title: 'Bases de Données',
+    icon: 'bi-database', // base de données
     skills: [
       { name: 'MySQL (SQL)', level: 85 },
       { name: 'PostgreSQL (SQL)', level: 70 },
@@ -39,6 +44,7 @@ const skillsData = [
   },
   {
     title: 'Systèmes et Outils Techniques',
+    icon: 'bi-tools', // outils techniques
     skills: [
       { name: 'Machines virtuelles', level: 70 },
       { name: 'Installation & paramétrage OS', level: 70 },
@@ -49,6 +55,7 @@ const skillsData = [
   },
   {
     title: 'IDE et Environnements de Développement',
+    icon: 'bi-laptop', // ordinateur portable (IDE)
     skills: [
       { name: 'VSCode (IDE)', level: 90 },
       { name: 'NetBeans (IDE)', level: 60 },
@@ -58,6 +65,7 @@ const skillsData = [
   },
   {
     title: 'Réseaux et Sécurité',
+    icon: 'bi-shield-lock', // bouclier sécurité
     skills: [
       { name: 'Administration réseau (IP, sous-réseaux, matériel)', level: 65 },
       { name: 'Sécurité : Loi, RGPD, CNIL, chiffrement', level: 60 },
@@ -69,6 +77,7 @@ const skillsData = [
   },
   {
     title: "Méthodes et Techniques d'Analyse",
+    icon: 'bi-journal-text', // document analyse, méthodes
     skills: [
       { name: "Méthodes d'analyse : MERISE, UML", level: 70 },
       { name: 'Architecture logicielle : MVC, DAO', level: 75 },
@@ -89,6 +98,7 @@ export default function BodyPage() {
     });
   };
 
+  
   return (
     <main className="bodypage-container" id="home">
       <div className="hero-image-container">
@@ -145,6 +155,8 @@ export default function BodyPage() {
             >
               <div className="flip-card-inner">
                 <div className="flip-card-front">
+                  {/* Icône au-dessus du titre */}
+                  <i className={`bi ${category.icon}`} style={{ fontSize: '2rem', marginBottom: '0.5rem' }}></i>
                   <h3>{category.title}</h3>
                 </div>
                 <div

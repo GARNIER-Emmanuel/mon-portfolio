@@ -160,6 +160,16 @@ html, body {
   box-shadow: 0 4px 12px #123456;
 }
 
+.profile-photo {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.profile-about-container {
+  perspective: 1000px;
+}
+
+
 .contact-info {
   flex: 1 1 60%;
   display: flex;
@@ -295,10 +305,20 @@ nav.custom-sidebar-bg > div {
 }
 /* BodyPage Skills Section */
 .skills-section {
-  padding: 2rem 1rem;
-  background-color: #f4f4f4;
-  text-align: center;
-  margin-top: 3rem;
+  display: flex;            /* on transforme en flex container */
+  flex-direction: column;   /* vertical */
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #123456;
+  box-sizing: border-box;
+}
+
+.skills-section h2{
+  font-size: 2.5rem;
+  color: #123456;
+  border-bottom: 3px solid #123456;
+  display: inline-block;
+  
 }
 
 .skills-grid {
@@ -316,6 +336,8 @@ nav.custom-sidebar-bg > div {
   perspective: 1000px;
   cursor: pointer;
 }
+
+
 
 .flip-card-inner {
   position: relative;
@@ -370,56 +392,5 @@ nav.custom-sidebar-bg > div {
   will-change: transform;
 }
 
-/* Animation défilement vertical */
-@keyframes scroll-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-/* Items des compétences */
-.skill-item {
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.skill-item p {
-  margin: 0 0 4px 0;
-  font-weight: 500;
-}
-
-.progress-bar {
-  background-color: #ddd;
-  border-radius: 8px;
-  height: 12px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.progress {
-  background-color: #123456;
-  height: 100%;
-  border-radius: 8px 0 0 8px;
-  transition: width 0.5s ease;
-}
 
 
-
-/* === Desktop (min-width: 768px) === */
-
-@media (min-width: 768px) {
-  nav.custom-sidebar-bg {
-    transform: translateX(0) !important;
-  }
-
-  .btn-toggle-sidebar {
-    display: none !important;
-  }
-
-  .sidebar-overlay {
-    display: none !important;
-  }
-}

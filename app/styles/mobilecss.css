@@ -117,36 +117,40 @@
     margin-bottom: 0.5rem;
   }
 
-  /* Skills section adaptation */
-  .skills-section {
-    padding: 10px;
+  
+  /* === Responsive très petit écran (max-width: 480px) === */
+  .skills-grid {
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    justify-content: flex-start;  /* pour que les cartes commencent à gauche */
+    padding-left: 1rem;           /* un petit padding interne */
+    margin-left: -1rem;   /* <-- ajoute ça */
+    padding-right: 1rem; /* ajoute aussi à droite pour équilibrer */
   }
-
-  .skills-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .skills-list li {
-    font-size: 1rem;
-  }
+.skills-grid .flip-card:first-child {
+  margin-left: 1rem; /* ou 1.5rem */
 }
 
-/* === Responsive très petit écran (max-width: 480px) === */
-
-@media (max-width: 480px) {
-  .hero-text h2 {
-    font-size: 1.5rem;
+  .flip-card {
+    flex: 0 0 260px;         /* largeur fixe, pas de flex-grow */
   }
-
-  .hero-text p {
-    font-size: 0.85rem;
-  }
-
-  .about-section h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-section p {
-    font-size: 0.95rem;
-  }
+.skills-grid::-webkit-scrollbar {
+  height: 6px;
 }
+
+.skills-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.skills-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+}
+
