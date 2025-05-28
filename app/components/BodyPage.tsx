@@ -32,7 +32,7 @@ export default function BodyPage() {
         <div className="contact-info">
         <h3>Développeur Full-Stack</h3>
 
-        <p><strong>Date de naissance :</strong> 22 juillet 2002</p>
+        <p><strong>Datee de naissance :</strong> 22 juillet 2002</p>
         <p><strong>Âge :</strong> 23 ans</p>
         <p><strong>Niveau d'étude :</strong> Master</p>
         <p><strong>Téléphone :</strong> +33 6 61 74 29 19</p>
