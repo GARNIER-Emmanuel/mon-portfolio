@@ -8,7 +8,7 @@ const skillsData = [
     icon: 'bi-code-slash', // icône code
     skills: [
       { name: 'JavaScript', level: 90 },
-      { name: 'Python', level: 85 },
+      { name: 'Python', level: 84 },
       { name: 'Java (POO)', level: 80 },
       { name: 'PHP', level: 75 },
     ],
@@ -171,8 +171,8 @@ export default function BodyPage() {
                   {category.skills.map((skill, i) => (
                     <div key={i} className="skill-item">
                       <p>{skill.name}</p>
-                      <div className="progress-bar">
-                        <div className="progress" style={{ width: `${skill.level}%` }}></div>
+                      <div className="progress">
+                        <div className="progress-bar" style={{ width: `${skill.level}%` }}></div>
                       </div>
                     </div>
                   ))}

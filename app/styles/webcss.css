@@ -366,6 +366,21 @@ nav.custom-sidebar-bg > div {
   transform: rotateY(180deg);
 }
 
+.progress {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: #123456; /* 💡 modifie ici pour changer la couleur */
+  font-weight: bold;
+  text-align: center;
+  transition: width 0.6s ease;
+  color: white;
+}
+
 /* Front et back ont la même taille et bordure */
 .flip-card-front,
 .flip-card-back {

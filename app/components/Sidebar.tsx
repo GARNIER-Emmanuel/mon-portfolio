@@ -7,6 +7,17 @@ export default function Sidebar() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+
+    handleResize(); // appel initial
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   // Gère le scroll du body pour mobile
   useEffect(() => {
     if (isOpen) {
@@ -32,6 +43,7 @@ export default function Sidebar() {
   useEffect(() => {
     setHasMounted(true);
   }, []);
+  
 
   if (!hasMounted) return null;
 
@@ -59,8 +71,8 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <nav
-        className={`custom-sidebar-bg text-white vh-100 p-3 position-fixed top-0 start-0 d-flex flex-column flex-shrink-0 ${isOpen || isDesktop ? "open" : ""}`}
-      >
+      className={`custom-sidebar-bg text-white vh-100 p-3 position-fixed top-0 start-0 d-flex flex-column flex-shrink-0 ${isOpen || isDesktop ? "open" : ""}`}>
+    
         <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: "100%" }}>
           <div className="profile-photo-container">
             <Image
