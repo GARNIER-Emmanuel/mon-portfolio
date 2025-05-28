@@ -4,8 +4,9 @@ import profileImage from '../img/profile.png';
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
-  // Empêche le scroll du body quand sidebar mobile ouverte
+  // Gère le scroll du body pour mobile
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -17,11 +18,21 @@ export default function Sidebar() {
     };
   }, [isOpen]);
 
+  // Détecte si on est en desktop
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const closeSidebar = () => setIsOpen(false);
 
   return (
     <>
-      {/* Bouton toggle uniquement visible sur mobile */}
+      {/* Bouton toggle visible seulement sur mobile */}
       <button
         className="btn btn-dark d-md-none btn-toggle-sidebar"
         type="button"
@@ -31,8 +42,8 @@ export default function Sidebar() {
         <i className="bi bi-app fs-4"></i>
       </button>
 
-      {/* Overlay semi-transparent mobile */}
-      {isOpen && (
+      {/* Overlay mobile */}
+      {isOpen && !isDesktop && (
         <div
           className="sidebar-overlay d-md-none"
           onClick={closeSidebar}
@@ -41,9 +52,8 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <nav
-        className={`custom-sidebar-bg text-white vh-100 p-3 position-fixed top-0 start-0 d-flex flex-column flex-shrink-0 ${isOpen ? "open" : ""}`}
+        className={`custom-sidebar-bg text-white vh-100 p-3 position-fixed top-0 start-0 d-flex flex-column flex-shrink-0 ${isOpen || isDesktop ? "open" : ""}`}
       >
-        {/* Conteneur centré verticalement et horizontalement */}
         <div className="d-flex flex-column justify-content-center align-items-center" style={{ height: "100%" }}>
           <div className="profile-photo-container">
             <Image
@@ -56,7 +66,6 @@ export default function Sidebar() {
             Emmanuel <br /> GARNIER BOIDUN
           </span>
 
-          {/* Réseaux sociaux */}
           <div className="sidebar-social-links">
             <a href="https://www.linkedin.com/in/emmanuel-garnier-boidun-456a85208/" target="_blank" rel="noopener noreferrer" className="text-white">
               <i className="bi bi-linkedin"></i>
