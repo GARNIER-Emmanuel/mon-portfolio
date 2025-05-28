@@ -4,6 +4,21 @@
 
 /* === Global styles === */
 
+@media (min-width: 768px) {
+  nav.custom-sidebar-bg {
+    transform: translateX(0) !important;
+  }
+
+  .btn-toggle-sidebar {
+    display: none !important;
+  }
+
+  .sidebar-overlay {
+    display: none !important;
+  }
+}
+
+
 html, body {
   scroll-behavior: smooth;
   margin: 0;

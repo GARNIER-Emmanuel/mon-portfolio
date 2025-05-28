@@ -1,6 +1,6 @@
 "use client";
 
-import { Sidebar } from "./components/Sidebar";
+import Sidebar from './components/Sidebar';
 import BodyPage from './components/BodyPage';
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
