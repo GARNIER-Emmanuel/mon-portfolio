@@ -376,7 +376,7 @@ nav.custom-sidebar-bg > div {
   font-weight: bold;
   text-align: center;
   transition: width 0.6s ease;
-  color: white;
+  color: rgb(226, 16, 16);
 }
 
 /* Front et back ont la même taille et bordure */
@@ -673,38 +673,49 @@ nav.custom-sidebar-bg > div {
   transform: scale(1.05);
 }
 
-/* projexts-section --------------------------------------------------------------------------------------------- */
-.carousel-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  background: #ffffff;
-  padding: 2rem;
-
-   scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #2a5298 #e0e0e0; 
+/* projects-section --------------------------------------------------------------------------------------------- */
+.project-container {
+  display: flex;            /* on transforme en flex container */
+  flex-direction: column;   /* vertical */
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  color: #123456;
+  box-sizing: border-box;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #2a5298 #e0e0e0;
+}
+.project-container h2 {
+  font-size: 2.5rem;
+  color: #123456;
+  border-bottom: 3px solid #123456;
+  display: inline-block;
+  padding-bottom: 0.3rem;
 }
 
+
 /* WebKit browsers (Chrome, Safari, Edge) */
-.carousel-container::-webkit-scrollbar {
+.project-section::-webkit-scrollbar {
   height: 8px; /* scrollbar thickness */
 }
 
-.carousel-container::-webkit-scrollbar-track {
+.project-section::-webkit-scrollbar-track {
   background: #e0e0e0; /* scrollbar track */
   border-radius: 4px;
 }
 
-.carousel-container::-webkit-scrollbar-thumb {
+.project-section::-webkit-scrollbar-thumb {
   background: #2a5298; /* scrollbar thumb */
   border-radius: 4px;
   border: 2px solid #e0e0e0; /* optional: gives padding effect */
 }
 
-.carousel-container::-webkit-scrollbar-thumb:hover {
+.project-section::-webkit-scrollbar-thumb:hover {
   background: #1e3c72; /* darker on hover */
 }
 
 .project-card {
+  
+  margin-top : 3rem;
   display: inline-block;
   width: 380px;
   margin-right: 1.5rem;

@@ -36,7 +36,9 @@ Une documentation technique complète a été réalisée, soulignant mon implica
 
 export default function ProjectCarousel() {
   return (
-    <div className="carousel-container" id="projects">
+    <div className="project-container" id="projects">
+      <h2><strong>Mes projets</strong></h2>
+      <div className="project-section">
       {projects.map(({ id, title, image, summary, description, github, site, date, tag }) => (
         <div key={id} className="project-card">
           <img src={image} alt={title} className="project-image" />
@@ -71,6 +73,7 @@ export default function ProjectCarousel() {
           </div>
         </div>
       ))}
+     </div>
     </div>
   );
 }
