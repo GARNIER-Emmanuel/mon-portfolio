@@ -677,7 +677,173 @@ nav.custom-sidebar-bg > div {
   transform: scale(1.05);
 }
 
+/* projexts-section --------------------------------------------------------------------------------------------- */
+.carousel-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #ffffff;
+  padding: 2rem;
 
+   scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #2a5298 #e0e0e0; 
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.carousel-container::-webkit-scrollbar {
+  height: 8px; /* scrollbar thickness */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #e0e0e0; /* scrollbar track */
+  border-radius: 4px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background: #2a5298; /* scrollbar thumb */
+  border-radius: 4px;
+  border: 2px solid #e0e0e0; /* optional: gives padding effect */
+}
+
+.carousel-container::-webkit-scrollbar-thumb:hover {
+  background: #1e3c72; /* darker on hover */
+}
+
+.project-card {
+  display: inline-block;
+  width: 380px;
+  margin-right: 1.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.project-summary {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  
+  white-space: normal;      /* Permet le retour à la ligne automatique */
+  overflow-wrap: break-word; /* Coupe les mots trop longs pour éviter le débordement */
+  word-wrap: break-word;     /* Compatibilité legacy */
+  word-break: break-word;    /* Coupe les mots si vraiment nécessaire */
+  max-width: 100%;           /* S’assure que ça reste dans le conteneur */
+  display: block;            /* Pour être sûr que ça peut gérer la hauteur */
+}
+
+.project-description {
+  position: absolute;
+  inset: 0;
+  background-color: #123456;
+  color: white;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  white-space: pre-line;
+}
+
+.project-card:hover .project-description {
+  opacity: 1;
+}
+
+.project-buttons {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.github-button {
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.github-button:hover {
+  background: linear-gradient(90deg, #2a5298, #1e3c72);
+}
+
+.site-button {
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.site-button:hover {
+  background: linear-gradient(90deg, #2a5298, #1e3c72);
+}
+
+.project-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.project-date {
+  font-style: italic;
+}
+
+.project-tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Couleurs selon le tag */
+.project-tag-pro {
+  background-color: #2a5298;
+  color: white;
+}
+
+.project-tag-perso {
+  background-color: #1e3c72;
+  color: white;
+}
+
+.project-tag-formation {
+  background-color: #4caf50;
+  color: white;
+}
 
 
 }
