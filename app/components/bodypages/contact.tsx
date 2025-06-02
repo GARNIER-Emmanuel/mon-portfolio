@@ -7,9 +7,13 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
+  ): void {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   }
+
 
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
