@@ -121,6 +121,11 @@ export default function Sidebar() {
               </a>
             </li>
             <li>
+              <a href="#education" className="nav-link text-white d-flex align-items-center" onClick={closeSidebar}>
+                <i className="bi bi-book"></i> Formations
+              </a>
+            </li>
+            <li>
               <a href="#projects" className="nav-link text-white d-flex align-items-center" onClick={closeSidebar}>
                 <i className="bi bi-folder"></i> Projets
               </a>

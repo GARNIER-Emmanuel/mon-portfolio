@@ -110,6 +110,8 @@ export default function ExperienceTimeline() {
         </div>
 
       </div>
+    
+
     </div>
   );
 }

@@ -4,7 +4,7 @@ import About from './bodypages/about';
 import Skills from './bodypages/skills';
 import skillsData from './data/skillsData';
 import Resume from './bodypages/resume';
-
+import ResumeSchool from './bodypages/resume-school';
 
 export default function BodyPage() {
   return (
@@ -13,6 +13,7 @@ export default function BodyPage() {
       <About />
       <Skills skillsData={skillsData} />
       <Resume/>
+      <ResumeSchool/>
     </main>
   );
 }
