@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Image from 'next/image';
 import profileImage from './img/profile.png';
@@ -12,10 +14,11 @@ export default function Sidebar() {
       setIsDesktop(window.innerWidth >= 768);
     };
 
-    handleResize(); // appel initial
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
 
   // Gère le scroll du body pour mobile
@@ -30,15 +33,6 @@ export default function Sidebar() {
     };
   }, [isOpen]);
 
-  // Détecte si on est en desktop
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
 
   useEffect(() => {
     setHasMounted(true);
