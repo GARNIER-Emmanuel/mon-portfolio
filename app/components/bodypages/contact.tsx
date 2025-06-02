@@ -9,6 +9,7 @@ export default function Contact() {
   setFormData({ ...formData, [e.target.name]: e.target.value });
 }
 
+
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
 
