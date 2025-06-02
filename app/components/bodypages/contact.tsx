@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -6,9 +8,8 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
-}
-
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
 
 function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
