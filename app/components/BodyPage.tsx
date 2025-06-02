@@ -6,6 +6,7 @@ import skillsData from './data/skillsData';
 import Resume from './bodypages/resume';
 import ResumeSchool from './bodypages/resume-school';
 import Project from './bodypages/projects';
+import Contact from './bodypages/contact';
 
 export default function BodyPage() {
   return (
@@ -15,7 +16,8 @@ export default function BodyPage() {
       <Skills skillsData={skillsData} />
       <Resume/>
       <ResumeSchool/>
-      <Project/>
+      <Project/> 
+      <Contact/>
     </main>
   );
 }

@@ -53,12 +53,12 @@ export default function Sidebar() {
     <>
       {/* Bouton toggle visible seulement sur mobile */}
       <button
-        className="btn btn-dark d-md-none btn-toggle-sidebar"
+        className="btn d-md-none btn-toggle-sidebar"
         type="button"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle navigation"
       >
-        <i className="bi bi-app fs-4"></i>
+      <i className="bi bi-list fs-2 text-white" ></i>
       </button>
 
       {/* Overlay mobile */}
