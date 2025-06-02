@@ -5,12 +5,12 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  setFormData({ ...formData, [e.target.name]: e.target.value });
+}
 
-  function handleSubmit(e) {
-    e.preventDefault();
+function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
 
     // Remplace ces valeurs par celles de ton compte EmailJS
     const serviceID = "service_vynmpr6";
