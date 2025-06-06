@@ -34,7 +34,7 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
   return (
     <section id="contact" className="contact-section">
-      <h2 className="contact-title">Contact</h2>
+      <h2 className="contact-title"><strong>Contact</strong></h2>
       <div className="contact-container">
         <div className="contact-left">
           <div className="contact-info">

@@ -7,6 +7,7 @@ import Resume from './bodypages/resume';
 import ResumeSchool from './bodypages/resume-school';
 import Project from './bodypages/projects';
 import Contact from './bodypages/contact';
+import Footer from './bodypages/Footer';
 
 export default function BodyPage() {
   return (
@@ -18,6 +19,7 @@ export default function BodyPage() {
       <ResumeSchool/>
       <Project/> 
       <Contact/>
+      <Footer/>
     </main>
   );
 }

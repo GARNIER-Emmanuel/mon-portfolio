@@ -27,6 +27,7 @@ export default function Skills({ skillsData }: SkillsProps) {
   };
 
   return (
+    <div className="skills-section-corp">
     <section className="skills-section" id="skills">
       <h2><strong>Compétences</strong></h2>
       <div className="skills-grid">
@@ -45,7 +46,6 @@ export default function Skills({ skillsData }: SkillsProps) {
               <div
                 className="flip-card-back"
                 style={{
-                  height: '300px',
                   overflowY: 'auto',
                   padding: '10px',
                   boxSizing: 'border-box',
@@ -65,5 +65,6 @@ export default function Skills({ skillsData }: SkillsProps) {
         ))}
       </div>
     </section>
+    </div>
   );
 }

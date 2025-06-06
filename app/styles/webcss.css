@@ -316,41 +316,52 @@ nav.custom-sidebar-bg > div {
 }
 /* BodyPage Skills Section -------------------------------------------------------------------*/
 
+/* Section expérience */
+
+.skills-section-corp {
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.skills-section-corp .timeline-title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
 
 .skills-section {
-  display: flex;            /* on transforme en flex container */
-  flex-direction: column;   /* vertical */
-  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
   background-color: #ffffff;
   color: #123456;
   box-sizing: border-box;
 }
 
-.skills-section h2{
-  font-size: 2.5rem;
+.skills-section h2 {
+  font-size: 2rem;
   color: #123456;
   border-bottom: 3px solid #123456;
   display: inline-block;
-  
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
 }
 
+/* 🟦 Cartes réduites */
 .flip-card {
   background-color: transparent;
-  width: 260px;
-  height: 300px;
+  width: 230px;
+  height: 220px;
   perspective: 1000px;
   cursor: pointer;
 }
-
-
 
 .flip-card-inner {
   position: relative;
@@ -365,54 +376,58 @@ nav.custom-sidebar-bg > div {
 }
 
 .progress {
-  height: 20px;
-  border-radius: 10px;
+  height: 12px;
+  border-radius: 6px;
   background-color: #e0e0e0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .progress-bar {
-  background-color: #123456; /* 💡 modifie ici pour changer la couleur */
+  background-color: #123456;
   font-weight: bold;
   text-align: center;
   transition: width 0.6s ease;
   color: rgb(226, 16, 16);
+  font-size: 0.7rem;
 }
 
-/* Front et back ont la même taille et bordure */
+/* 🟦 Front et back compactes */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  width: 260px;
-  height: 300px;
+  width: 230px;
+  height: 220px;
   backface-visibility: hidden;
   border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden; /* cache les scrollbars */
+  overflow: hidden;
+  
 }
 
 .flip-card-front {
   background-color: #123456;
   color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem;
   text-align: center;
+  
 }
 
 .flip-card-back {
   background-color: white;
   color: #333;
   transform: rotateY(180deg);
-  justify-content: flex-start; /* contenu aligné en haut */
-  overflow: auto; /* pas de scroll natif */
+  justify-content: flex-start;
+  overflow: hidden; /* 🔒 empêche le scroll */
+  font-size: 0.85rem;
 }
 
-/* Conteneur défilement vertical animé */
+/* Bonus animation (facultatif) */
 .scroll-content {
   display: block;
   flex-direction: column;
@@ -420,13 +435,12 @@ nav.custom-sidebar-bg > div {
   will-change: transform;
 }
 
-
-
 @media (min-width: 768px) {
   nav.custom-sidebar-bg {
     display: flex !important;
     transform: translateX(0) !important;
   }
+}
 
 
   /* resume partie */
@@ -589,7 +603,6 @@ nav.custom-sidebar-bg > div {
   box-sizing: border-box;
   padding: 20px;
   background-color: #ffffff;
-  height: 100vh; /* optionnel, selon besoin */
 }
 
 .experience-section .timeline-title {
@@ -672,6 +685,21 @@ nav.custom-sidebar-bg > div {
 .experience-logo:hover {
   transform: scale(1.05);
 }
+
+/* school experience */
+
+.education-section {
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.education-section .timeline-title {
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+
 
 /* projects-section --------------------------------------------------------------------------------------------- */
 .project-container {
@@ -787,7 +815,7 @@ nav.custom-sidebar-bg > div {
 .github-button {
   flex: 1;
   text-align: center;
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  background: #3498db;
   color: #fff;
   border-radius: 8px;
   font-weight: bold;
@@ -797,13 +825,13 @@ nav.custom-sidebar-bg > div {
 }
 
 .github-button:hover {
-  background: linear-gradient(90deg, #2a5298, #1e3c72);
+  background: #1d3f7c;
 }
 
 .site-button {
   flex: 1;
   text-align: center;
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  background: #3498db;
   color: #fff;
   border-radius: 8px;
   font-weight: bold;
@@ -813,7 +841,7 @@ nav.custom-sidebar-bg > div {
 }
 
 .site-button:hover {
-  background: linear-gradient(90deg, #2a5298, #1e3c72);
+  background: #1d3f7c;
 }
 
 .project-meta {
@@ -865,6 +893,7 @@ nav.custom-sidebar-bg > div {
 .contact-section h2{
   font-size: 2.5rem;
   color: #123456;
+  padding-bottom: 0.3rem;
   border-bottom: 3px solid #123456;
   display: inline-block;
   
@@ -885,13 +914,15 @@ nav.custom-sidebar-bg > div {
 .contact-info {
   margin-bottom: 1rem;
   background: #123456;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .map-container {
+  background-color: #123456;
   border-radius: 12px;
+  padding: 1rem;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -961,4 +992,32 @@ nav.custom-sidebar-bg > div {
   background-color: #3498db; /* bouton bleu */
 }
 
+
+/* Footer ----------*/
+
+.portfolio-footer {
+  background-color: #123456;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
 }
