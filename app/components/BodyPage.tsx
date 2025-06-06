@@ -7,7 +7,7 @@ import Resume from './bodypages/resume';
 import ResumeSchool from './bodypages/resume-school';
 import Project from './bodypages/projects';
 import Contact from './bodypages/contact';
-import Footer from './bodypages/Footer';
+import Footer from './bodypages/footer';
 
 export default function BodyPage() {
   return (
