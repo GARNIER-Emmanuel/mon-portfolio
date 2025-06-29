@@ -4,9 +4,9 @@ const experiences = [
   {
     title: "Développeur junior",
     location: "Alternance | Bordeaux",
-    date: "septembre 2023 - Aujourd’hui",
+    date: "septembre 2023 - Aujourd'hui",
     description:
-      "Missions dans l’éditique mais également en développement logiciel Java au sein de l’entreprise CGI.",
+      "Missions dans l'éditique mais, également en développement logiciel Java au sein de l'entreprise CGI.",
     company: "CGI",
     tech: ["Java", "PDFBox", "JavaFX"],
     image: "/cgi.png"
@@ -53,7 +53,7 @@ const experiences = [
     location: "Italie",
     date: "2016",
     description:
-      "Voyage scolaire en Italie avec option Latin.",
+      "Voyage scolaire en Italie avec option Latin en 2016.",
     company: "Collège"
   }
 ];

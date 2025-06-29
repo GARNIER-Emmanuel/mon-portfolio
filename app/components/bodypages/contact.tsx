@@ -38,7 +38,7 @@ function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
       <div className="contact-container">
         <div className="contact-left">
           <div className="contact-info">
-            <p><strong>Adresse :</strong> 15 route de margaux 33480 à Avensan</p>
+            <p><strong>Adresse :</strong> 15 route de margaux, 33480 Avensan</p>
             <p><strong>Email :</strong> manu.boidun@gmail.com</p>
             <p><strong>Téléphone :</strong> 06 61 74 29 19</p>
           </div>

@@ -2,28 +2,28 @@ import { useState } from "react";
 
 const educations = [
   {
-    title: "Master 1 Développeur Full Stack",
+    title: "Master 1re année développeur full stack",
     school: "Sup de Vinci, Bordeaux",
     date: "Depuis 2024",
     description: "Formation actuelle en alternance orientée développement full stack.",
     image: "/SupDeVinci.png"
   },
   {
-    title: "Bachelor Concepteur Développeur d’Applications",
+    title: "Bachelor Concepteur développeur d'applications",
     school: "CESI, Bordeaux",
     date: "Obtenu en 2024",
     description: "Formation en alternance avec forte composante pratique.",
     image: "/cesi.png"
   },
   {
-    title: "BTS SIO option SLAM",
+    title: "BTS SIO (Services Informatiques aux Organisations) option SLAM",
     school: "Lycée Saint-John Perse, Pau",
     date: "Obtenu en 2023",
-    description: "Spécialisation en développement d’applications métiers.",
+    description: "Spécialisation en Solutions Logicielles et Applications Métiers.",
     image: "/SaintJhonPerse.png"
   },
   {
-    title: "Bac STI2D",
+    title: "Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable",
     school: "Lycée Saint-Cricq, Pau",
     date: "Obtenu en 2021",
     description: "Spécialisation en innovation technologique et développement durable.",

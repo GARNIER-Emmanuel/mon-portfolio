@@ -1,4 +1,3 @@
-
 /* === Responsive / Mobile (max-width: 767px) === */
 
 @media (max-width: 767px) {
@@ -64,57 +63,120 @@
   }
 
   .about-section {
-    padding-top: 4rem;      /* conserve le padding top */
-    padding-bottom: 0;      /* supprime le padding bas */
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 1rem;      /* réduit encore le padding top */
+    padding-bottom: 1rem;   /* réduit le padding bas */
+    padding-left: 0.5rem;   /* réduit le padding horizontal */
+    padding-right: 0.5rem;
+    min-height: auto;       /* hauteur automatique sur mobile */
+    justify-content: flex-start; /* aligne en haut sur mobile */
+    overflow-y: visible;    /* pas de scroll sur mobile */
   }
 
   .about-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;      /* réduit la taille du titre */
     text-align: center;
+    margin-bottom: 0.5rem;  /* réduit la marge */
   }
 
   .about-section p {
-    font-size: 1.1rem;
-    line-height: 1.4;
+    font-size: 1rem;        /* réduit la taille du texte */
+    line-height: 1.3;
     text-align: justify;
+    margin-bottom: 0.5rem;  /* réduit la marge */
   }
 
   .profile-about-container {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;              /* réduit le gap */
     align-items: center;
+    margin-top: 0.5rem;     /* réduit la marge */
   }
 
   .profile-photo {
-    max-width: 150px;
-    width: 50%;
+    max-width: 120px;       /* réduit la taille de la photo */
+    width: 40%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 8px;     /* réduit le border-radius */
   }
 
   .contact-info {
     flex-direction: column;
     max-height: none;
-    padding: 1rem;
-    border-radius: 0;
+    padding: 0.8rem;        /* réduit le padding */
+    border-radius: 8px;     /* réduit le border-radius */
     box-shadow: none;
+    gap: 0.3rem 0;          /* réduit les gaps */
   }
 
   .contact-info h3 {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;  /* réduit la marge */
+    font-size: 1.2rem;      /* réduit la taille */
   }
 
   .contact-info p {
     flex: none;
     width: 100%;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem;      /* réduit la taille du texte */
+    margin-bottom: 0.3rem;  /* réduit la marge */
   }
 
-  
+  .languages-section {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .languages-section h3 {
+    color: #123456;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #123456;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .languages-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .language-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .language-name {
+    font-weight: bold;
+    color: #123456;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .language-level {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
   /* === Responsive très petit écran (max-width: 480px) === */
   .skills-grid {
     box-sizing: border-box;
@@ -153,7 +215,7 @@
   position: relative;
   height: 8px;
   background-color: #ddd;
-  margin: 3rem 0;
+  margin: 1.5rem 0;
   border-radius: 4px;
 }
 
@@ -204,7 +266,7 @@
 @media (max-width: 768px) {
   .timeline-bar {
     height: 6px;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   .timeline-point {
@@ -226,32 +288,35 @@
 .timeline-details {
   background-color: var(--bs-light);
   border-left: 5px solid #123456;
-  padding: 2.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   text-align: left;
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  margin-top: 2rem;
+  margin: 1rem 0;
   display: flex;
   align-items: center;
 }
 
 .timeline-details h3 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--bs-dark);
+  margin-bottom: 0.5rem;
 }
 
 .timeline-details h4 {
   margin: 0.25rem 0 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #123456;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-details p {
   color: #123456;
   margin-bottom: 1rem;
-  line-height: 1.4;
+  line-height: 1.3;
+  font-size: 0.9rem;
 }
 
 .tech-list {
@@ -362,6 +427,8 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   vertical-align: top;
   transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .project-card:hover {
@@ -380,9 +447,9 @@
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-summary {
@@ -502,23 +569,14 @@
   display: flex;
   flex-direction: column;
   padding: 4rem 2rem;
-  background-color: #ffffff;
   color: #123456;
   box-sizing: border-box;
-}
-
-.contact-section h2 {
-  font-size: 2.5rem;
-  color: #123456;
-  border-bottom: 3px solid #123456;
-  display: inline-block;
 }
 
 .contact-container {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  background-color: #ffffff;
 }
 
 .contact-left {
@@ -556,6 +614,7 @@
   margin-bottom: 0.3rem;
   font-weight: bold;
   color: #ffffff;
+  font-size: 0.9rem;
 }
 
 .contact-form input,
@@ -567,6 +626,7 @@
   border: 1px solid #ffffff;
   font-family: inherit;
   color: #123456;
+  font-size: 0.9rem;
 }
 
 .contact-form button {
@@ -616,6 +676,81 @@
   }
 }
 
+/* Ajustements pour toutes les sections sur mobile */
+.skills-section-corp,
+.experience-section,
+.education-section,
+.project-container,
+.contact-section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  min-height: auto;
+  justify-content: flex-start;
+  overflow-y: visible;
+}
+
+.skills-section-corp h2,
+.experience-section h2,
+.education-section h2,
+.project-container h2,
+.contact-section h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Ajustements spécifiques pour les sections avec timeline */
+.timeline-bar {
+  margin: 1.5rem 0;
+}
+
+.timeline-details {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.timeline-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-details h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-details p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+/* Ajustements pour le contact */
+.contact-container {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-left,
+.contact-form {
+  width: 100%;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
 
 }
 

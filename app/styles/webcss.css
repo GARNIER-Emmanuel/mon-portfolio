@@ -130,40 +130,43 @@ html, body {
 .about-section {
   display: flex;            /* on transforme en flex container */
   flex-direction: column;   /* vertical */
-  padding: 4rem 2rem;
-  background-color: #ffffff;
+  min-height: 100vh;        /* prend toute la hauteur de la page */
+  padding: 2rem;            /* réduit le padding */
   color: #123456;
   box-sizing: border-box;
+  justify-content: flex-start; /* aligne en haut */
+  overflow-y: auto;         /* ajoute un scroll si nécessaire */
 }
+
 .about-section h2 {
   font-size: 2.5rem;
   color: #123456;
   border-bottom: 3px solid #123456;
   display: inline-block;
   padding-bottom: 0.3rem;
+  margin-bottom: 1rem;      /* ajoute une marge */
 }
-
 
 .about-section p {
   text-align: justify; 
   font-size: 1.4rem;
   line-height: 1.3;
-  margin-bottom: -1rem;
+  margin-bottom: 1rem;      /* corrige la marge négative */
   color : #123456;
 }
 
 .profile-about-container {
   display: flex;
   gap: 2rem;
-  margin-top: 2.5rem;
+  margin-top: 1rem;         /* réduit la marge */
   align-items: flex-start;
   flex-wrap: wrap;
-  height: 100%; /* pour utiliser toute la hauteur disponible */
+  height: auto;             /* hauteur automatique */
 }
 
 .profile-photo {
   flex: 1 1 30%;
-  max-width: 300px;
+  max-width: 250px;         /* réduit la taille max */
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -185,16 +188,15 @@ html, body {
   flex: 1 1 60%;
   display: flex;
   flex-wrap: wrap;           /* passage à la ligne si besoin */
-  gap: 1rem 2rem;            /* espace vertical/horizontal entre items */
+  gap: 0.8rem 1.5rem;        /* réduit les gaps */
   background-color: #123456;
-  padding: 2rem;
+  padding: 1.5rem;           /* réduit le padding */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   justify-content: flex-start;
   align-items: flex-start;
-  /* important pour limiter la hauteur et avoir un scroll si besoin */
-  max-height: calc(100vh - 10rem); /* adapte à ta hauteur d’écran - marge (à ajuster) */
-  overflow-y: auto;          /* scroll interne si trop grand */
+  max-height: none;          /* supprime la limite de hauteur */
+  overflow-y: visible;       /* supprime le scroll interne */
 }
 
 .contact-info h3 {
@@ -205,11 +207,63 @@ html, body {
 }
 
 .contact-info p {
-  flex: 1 1 45%;             /* deux colonnes de ~45% chacune */
   margin: 0.5rem 0;
-  font-size: 1.05rem;
-  color: #ffffff;
-  border-bottom: none;       /* sans bordure */
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.languages-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.languages-section h3 {
+  color: #123456;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #123456;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.languages-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.language-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.language-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.language-name {
+  font-weight: bold;
+  color: #123456;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.language-level {
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
 }
 
 /* === Sidebar === */
@@ -319,24 +373,25 @@ nav.custom-sidebar-bg > div {
 /* Section expérience */
 
 .skills-section-corp {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   overflow-y: auto;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: #ffffff;
 }
 
 .skills-section-corp .timeline-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .skills-section {
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
-  background-color: #ffffff;
-  color: #123456;
-  box-sizing: border-box;
+  justify-content: flex-start;
 }
 
 .skills-section h2 {
@@ -599,20 +654,21 @@ nav.custom-sidebar-bg > div {
 
 /* Section expérience */
 .experience-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   overflow-y: auto;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: #ffffff;
 }
 
 .experience-section .timeline-title {
-  font-size: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
-/* Détails de l’expérience------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Détails de l'expérience------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 .timeline-details {
-  background-color: var(--bs-light);
   border-left: 5px solid #123456;
   padding: 2.5rem;
   border-radius: 0.5rem;
@@ -676,7 +732,6 @@ nav.custom-sidebar-bg > div {
   object-fit: contain;
   margin-right: 30px;
   border-radius: 16px;
-  background-color: white;
   padding: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -689,37 +744,39 @@ nav.custom-sidebar-bg > div {
 /* school experience */
 
 .education-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   overflow-y: auto;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: #ffffff;
 }
 
 .education-section .timeline-title {
-  font-size: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 
 /* projects-section --------------------------------------------------------------------------------------------- */
 .project-container {
-  display: flex;            /* on transforme en flex container */
-  flex-direction: column;   /* vertical */
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  color: #123456;
-  box-sizing: border-box;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #2a5298 #e0e0e0;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
+
 .project-container h2 {
   font-size: 2.5rem;
   color: #123456;
   border-bottom: 3px solid #123456;
   display: inline-block;
   padding-bottom: 0.3rem;
+  margin-bottom: 2rem;
 }
-
 
 /* WebKit browsers (Chrome, Safari, Edge) */
 .project-section::-webkit-scrollbar {
@@ -750,7 +807,6 @@ nav.custom-sidebar-bg > div {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  background: #ffffff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   vertical-align: top;
   transition: transform 0.3s ease;
@@ -786,7 +842,7 @@ nav.custom-sidebar-bg > div {
   overflow-wrap: break-word; /* Coupe les mots trop longs pour éviter le débordement */
   word-wrap: break-word;     /* Compatibilité legacy */
   word-break: break-word;    /* Coupe les mots si vraiment nécessaire */
-  max-width: 100%;           /* S’assure que ça reste dans le conteneur */
+  max-width: 100%;           /* S'assure que ça reste dans le conteneur */
   display: block;            /* Pour être sûr que ça peut gérer la hauteur */
 }
 
@@ -882,21 +938,22 @@ nav.custom-sidebar-bg > div {
 
 /* section contact ----------------------------------------------------------------------------------------------------------------*/
 .contact-section {
-  display: flex;            /* on transforme en flex container */
-  flex-direction: column;   /* vertical */
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  color: #123456;
-  box-sizing: border-box;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .contact-section h2{
   font-size: 2.5rem;
   color: #123456;
-  padding-bottom: 0.3rem;
   border-bottom: 3px solid #123456;
   display: inline-block;
-  
+  padding-bottom: 0.3rem;
+  margin-bottom: 2rem;
 }
 
 .contact-container {
